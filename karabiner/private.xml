@@ -572,17 +572,17 @@
         KeyCode::M, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L
       </autogen>
 
-      <appendix>- Use Control+H to send window to the previous monitor</appendix>
+      <appendix>- Use Shift_R+H to send window to the previous monitor</appendix>
       <autogen>
         __KeyToKey__
-        KeyCode::H, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+        KeyCode::H, ModifierFlag::SHIFT_R | ModifierFlag::NONE,
         KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L, Option::NOREPEAT
       </autogen>
 
-      <appendix>- Use Control+L to send window to the next monitor</appendix>
+      <appendix>- Use Shift_R+L to send window to the next monitor</appendix>
       <autogen>
         __KeyToKey__
-        KeyCode::U, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+        KeyCode::U, ModifierFlag::SHIFT_R | ModifierFlag::NONE,
         KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L, Option::NOREPEAT
       </autogen>
 
