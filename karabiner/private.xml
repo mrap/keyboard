@@ -2,28 +2,36 @@
 <root>
   <!-- Application URLs -->
   <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Atom</name>
-    <url type="file">/Applications/Atom.app</url>
+    <name>KeyCode::VK_OPEN_URL_APP_Chrome</name>
+    <url type="file">{{ ENV_HOME }}/Applications/Google Chrome.app</url>
   </vkopenurldef>
   <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Chrome</name>
-    <url type="file">/Applications/Google Chrome.app</url>
+    <name>KeyCode::VK_OPEN_URL_APP_Chrome_Canary</name>
+    <url type="file">/Applications/Google Chrome Canary.app</url>
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_iTerm</name>
-    <url type="file">/Applications/iTerm.app</url>
+    <url type="file">{{ ENV_HOME }}/Applications/iTerm.app</url>
   </vkopenurldef>
   <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Mailplane</name>
-    <url type="file">/Applications/Mailplane 3.app</url>
+    <name>KeyCode::VK_OPEN_URL_APP_Dash</name>
+    <url type="file">{{ ENV_HOME }}/Applications/Dash.app</url>
   </vkopenurldef>
   <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Propane</name>
-    <url type="file">/Applications/Propane.app</url>
+    <name>KeyCode::VK_OPEN_URL_APP_Tidal</name>
+    <url type="file">/Applications/Tidal.app</url>
   </vkopenurldef>
   <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_TaskPaper</name>
-    <url type="file">/Applications/TaskPaper.app</url>
+    <name>KeyCode::VK_OPEN_URL_APP_Slack</name>
+    <url type="file">{{ ENV_HOME }}/Applications/Slack.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Messages</name>
+    <url type="file">/Applications/Messages.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Mailbox</name>
+    <url type="file">{{ ENV_HOME }}/Applications/Mailbox (Beta).app</url>
   </vkopenurldef>
 
   <replacementdef>
@@ -138,52 +146,22 @@
     </item>
 
     <item>
-      <name>Hyper+A to open iTunes ("A" for "Apple Music")</name>
-      <identifier>com.jasonrudolph.hyper_a</identifier>
+      <name>Hyper+RETURN to open Chrome</name>
+      <identifier>com.jasonrudolph.hyper_return</identifier>
       <autogen>
         __KeyToKey__
-        KeyCode::A, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-        KeyCode::VK_OPEN_URL_APP_iTunes,
-      </autogen>
-    </item>
-
-    <item>
-      <name>Hyper+B to open Chrome ("B" for "Browser")</name>
-      <identifier>com.jasonrudolph.hyper_b</identifier>
-      <autogen>
-        __KeyToKey__
-        KeyCode::B, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::RETURN, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
         KeyCode::VK_OPEN_URL_APP_Chrome,
       </autogen>
     </item>
 
     <item>
-      <name>Hyper+C to open Propane ("C" for "Chat")</name>
-      <identifier>com.jasonrudolph.hyper_c</identifier>
+      <name>Hyper+B to open Chrome Canary</name>
+      <identifier>com.jasonrudolph.hyper_b</identifier>
       <autogen>
         __KeyToKey__
-        KeyCode::C, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-        KeyCode::VK_OPEN_URL_APP_Propane,
-      </autogen>
-    </item>
-
-    <item>
-      <name>Hyper+D to open TaskPaper ("D" for "Do!" ... or Done!")</name>
-      <identifier>com.jasonrudolph.hyper_d</identifier>
-      <autogen>
-        __KeyToKey__
-        KeyCode::D, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-        KeyCode::VK_OPEN_URL_APP_TaskPaper,
-      </autogen>
-    </item>
-
-    <item>
-      <name>Hyper+E to open Atom ("E" for "Editor")</name>
-      <identifier>com.jasonrudolph.hyper_e</identifier>
-      <autogen>
-        __KeyToKey__
-        KeyCode::E, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-        KeyCode::VK_OPEN_URL_APP_Atom,
+        KeyCode::B, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_Chrome_Canary,
       </autogen>
     </item>
 
@@ -192,28 +170,68 @@
       <identifier>com.jasonrudolph.hyper_f</identifier>
       <autogen>
         __KeyToKey__
-        KeyCode::F, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::E, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
         KeyCode::VK_OPEN_URL_APP_Finder,
       </autogen>
     </item>
 
     <item>
-      <name>Hyper+G to open Mailplane ("G" for "Gmail")</name>
-      <identifier>com.jasonrudolph.hyper_g</identifier>
+      <name>Hyper+SPACE to open iTerm</name>
+      <identifier>com.jasonrudolph.hyper_space</identifier>
       <autogen>
         __KeyToKey__
-        KeyCode::G, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-        KeyCode::VK_OPEN_URL_APP_Mailplane,
+        KeyCode::SPACE, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_iTerm,
       </autogen>
     </item>
 
     <item>
-      <name>Hyper+T to open iTerm ("T" for "Terminal")</name>
+      <name>Hyper+D to open Dash ("D" for "Dash")</name>
+      <identifier>com.jasonrudolph.hyper_d</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::G, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_Dash,
+      </autogen>
+    </item>
+
+    <item>
+      <name>Hyper+T to open Tidal</name>
       <identifier>com.jasonrudolph.hyper_t</identifier>
       <autogen>
         __KeyToKey__
-        KeyCode::T, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-        KeyCode::VK_OPEN_URL_APP_iTerm,
+        KeyCode::F, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_Tidal,
+      </autogen>
+    </item>
+
+    <item>
+      <name>Hyper+C to open Slack</name>
+      <identifier>com.jasonrudolph.hyper_c</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::C, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_Slack,
+      </autogen>
+    </item>
+
+    <item>
+      <name>Hyper+M to open Messages</name>
+      <identifier>com.jasonrudolph.hyper_m</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::M, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_Messages,
+      </autogen>
+    </item>
+
+    <item>
+      <name>Hyper+E to open Mailbox</name>
+      <identifier>com.jasonrudolph.hyper_e</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::K, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_Mailbox,
       </autogen>
     </item>
   </item>
@@ -261,7 +279,7 @@
       <autogen>
         __KeyToKey__
         KeyCode::SEMICOLON, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL | ModifierFlag::NONE,
-        KeyCode::K, ModifierFlag::CONTROL_L,
+        KeyCode::N, ModifierFlag::CONTROL_L,
         Option::NOREPEAT
       </autogen>
     </block>
@@ -285,7 +303,7 @@
     </autogen>
     <autogen>
       __KeyToKey__
-      KeyCode::L, ModifierFlag::OPTION_L | ModifierFlag::NONE,
+      KeyCode::U, ModifierFlag::OPTION_L | ModifierFlag::NONE,
       KeyCode::ESCAPE,
       KeyCode::D
     </autogen>
@@ -308,7 +326,7 @@
     </autogen>
     <autogen>
       __KeyToKey__
-      KeyCode::L, ModifierFlag::OPTION_L | ModifierFlag::NONE,
+      KeyCode::U, ModifierFlag::OPTION_L | ModifierFlag::NONE,
       KeyCode::FORWARD_DELETE, ModifierFlag::OPTION_L
     </autogen>
   </item>
@@ -340,17 +358,17 @@
     </autogen>
     <autogen>
       __KeyToKey__
-      KeyCode::J, ModifierFlag::CONTROL_L,
+      KeyCode::Y, ModifierFlag::CONTROL_L,
       KeyCode::CURSOR_DOWN, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
     </autogen>
     <autogen>
       __KeyToKey__
-      KeyCode::K, ModifierFlag::CONTROL_L,
+      KeyCode::N, ModifierFlag::CONTROL_L,
       KeyCode::CURSOR_UP, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
     </autogen>
     <autogen>
       __KeyToKey__
-      KeyCode::L, ModifierFlag::CONTROL_L,
+      KeyCode::U, ModifierFlag::CONTROL_L,
       KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L
     </autogen>
   </item>
@@ -488,92 +506,97 @@
       <appendix>Before enabling this mode, you should click "Restore Defaults" in SizeUp's Shortcuts tab.</appendix>
       <appendix>---</appendix>
       <identifier vk_config="true">notsave.com_jasonrudolph_sizeup_prefix_mode_core</identifier>
-      <autogen>__ShowStatusMessage__ SizeUp Mode (Control-s)</autogen>
+      <autogen>__ShowStatusMessage__ SizeUp Mode (Hyper-s)</autogen>
 
       <appendix>- Use H/J/K/L to send window left/down/up/right</appendix>
       <autogen>
         __KeyToKey__
         KeyCode::H, ModifierFlag::NONE,
-        KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+        KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L
       </autogen>
       <autogen>
         __KeyToKey__
-        KeyCode::J, ModifierFlag::NONE,
-        KeyCode::CURSOR_DOWN, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+        KeyCode::Y, ModifierFlag::NONE,
+        KeyCode::CURSOR_DOWN, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L
       </autogen>
       <autogen>
         __KeyToKey__
-        KeyCode::K, ModifierFlag::NONE,
-        KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+        KeyCode::N, ModifierFlag::NONE,
+        KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L
       </autogen>
       <autogen>
         __KeyToKey__
-        KeyCode::L, ModifierFlag::NONE,
-        KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+        KeyCode::U, ModifierFlag::NONE,
+        KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L
       </autogen>
 
       <appendix>- Use I to send window upper right</appendix>
       <autogen>
         __KeyToKey__
         KeyCode::I, ModifierFlag::NONE,
-        KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+        KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
       </autogen>
 
       <appendix>- Use O to send window upper right</appendix>
       <autogen>
         __KeyToKey__
         KeyCode::O, ModifierFlag::NONE,
-        KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+        KeyCode::CURSOR_UP, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
       </autogen>
 
       <appendix>- Use , to send window lower left</appendix>
       <autogen>
         __KeyToKey__
         KeyCode::COMMA, ModifierFlag::NONE,
-        KeyCode::CURSOR_DOWN, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+        KeyCode::CURSOR_DOWN, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
       </autogen>
 
       <appendix>- Use . to send window lower right</appendix>
       <autogen>
         __KeyToKey__
         KeyCode::DOT, ModifierFlag::NONE,
-        KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+        KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L
       </autogen>
 
       <appendix>- Use Space to send window center</appendix>
       <autogen>
         __KeyToKey__
         KeyCode::SPACE, ModifierFlag::NONE,
-        KeyCode::C, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+        KeyCode::C, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L
       </autogen>
 
-      <appendix>- Use Return to make window full screen</appendix>
+      <appendix>- Use M to make window full screen</appendix>
       <autogen>
         __KeyToKey__
-        KeyCode::RETURN, ModifierFlag::NONE,
-        KeyCode::M, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+        KeyCode::M, ModifierFlag::NONE,
+        KeyCode::M, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L
       </autogen>
 
       <appendix>- Use Control+H to send window to the previous monitor</appendix>
       <autogen>
         __KeyToKey__
         KeyCode::H, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
-        KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core,
-        Option::NOREPEAT
+        KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L, Option::NOREPEAT
       </autogen>
 
       <appendix>- Use Control+L to send window to the next monitor</appendix>
       <autogen>
         __KeyToKey__
-        KeyCode::L, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
-        KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L | ModifierFlag::OPTION_L, KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core,
-        Option::NOREPEAT
+        KeyCode::U, ModifierFlag::CONTROL_L | ModifierFlag::NONE,
+        KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L, Option::NOREPEAT
       </autogen>
 
       <appendix>- Use Control+S to turn off SizeUp Mode</appendix>
       <autogen>
         __KeyToKey__
-        KeyCode::S, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL | ModifierFlag::NONE,
+        KeyCode::D, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
+      </autogen>
+
+      <appendix>- Use ESC to turn off SizeUp Mode</appendix>
+      <autogen>
+        __KeyToKey__
+        KeyCode::F19, ModifierFlag::NONE,
         KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_sizeup_prefix_mode_core
       </autogen>
     </item>
@@ -582,7 +605,7 @@
       <identifier>option.com_jasonrudolph_sizeup_prefix_mode</identifier>
       <autogen>
         __KeyToKey__
-        KeyCode::S, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL | ModifierFlag::NONE,
+        KeyCode::D, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
         KeyCode::VK_CONFIG_FORCE_ON_notsave_com_jasonrudolph_sizeup_prefix_mode_core
       </autogen>
     </item>
@@ -694,7 +717,7 @@
       <appendix>:    Example => [selection](clipboard)</appendix>
       <autogen>
         __KeyToKey__
-        KeyCode::L, ModifierFlag::NONE,
+        KeyCode::U, ModifierFlag::NONE,
         KeyCode::VK_OPEN_URL_SHELL_markdown_inline_link,
         KeyCode::VK_CONFIG_FORCE_OFF_notsave_com_jasonrudolph_markdown_prefix_mode_core,
       </autogen>
@@ -746,3 +769,4 @@
   </item>
 
 </root>
+
