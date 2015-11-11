@@ -7,7 +7,7 @@
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Chrome_Canary</name>
-    <url type="file">/Applications/Google Chrome Canary.app</url>
+    <url type="file">{{ ENV_HOME }}/Applications/Google Chrome Canary.app</url>
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_iTerm</name>
@@ -22,16 +22,24 @@
     <url type="file">/Applications/Tidal.app</url>
   </vkopenurldef>
   <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Trello</name>
+    <url type="file">/Applications/Trello.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Plug</name>
+    <url type="file">{{ ENV_HOME }}/Applications/Plug.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Slack</name>
     <url type="file">{{ ENV_HOME }}/Applications/Slack.app</url>
   </vkopenurldef>
   <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Messages</name>
-    <url type="file">/Applications/Messages.app</url>
-  </vkopenurldef>
-  <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Mailbox</name>
     <url type="file">{{ ENV_HOME }}/Applications/Mailbox (Beta).app</url>
+  </vkopenurldef>
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Wunderlist</name>
+    <url type="file">/Applications/Wunderlist.app</url>
   </vkopenurldef>
 
   <replacementdef>
@@ -206,6 +214,26 @@
     </item>
 
     <item>
+      <name>Hyper+O to open Trello</name>
+      <identifier>com.jasonrudolph.hyper_o</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::SEMICOLON, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_Trello,
+      </autogen>
+    </item>
+
+    <item>
+      <name>Hyper+P to open Plug</name>
+      <identifier>com.jasonrudolph.hyper_p</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::R, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_Plug,
+      </autogen>
+    </item>
+
+    <item>
       <name>Hyper+C to open Slack</name>
       <identifier>com.jasonrudolph.hyper_c</identifier>
       <autogen>
@@ -216,22 +244,22 @@
     </item>
 
     <item>
-      <name>Hyper+M to open Messages</name>
-      <identifier>com.jasonrudolph.hyper_m</identifier>
-      <autogen>
-        __KeyToKey__
-        KeyCode::M, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-        KeyCode::VK_OPEN_URL_APP_Messages,
-      </autogen>
-    </item>
-
-    <item>
       <name>Hyper+E to open Mailbox</name>
       <identifier>com.jasonrudolph.hyper_e</identifier>
       <autogen>
         __KeyToKey__
         KeyCode::K, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
         KeyCode::VK_OPEN_URL_APP_Mailbox,
+      </autogen>
+    </item>
+
+    <item>
+      <name>Hyper+W to open Wunderlist</name>
+      <identifier>com.jasonrudolph.hyper_w</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::W, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_Wunderlist,
       </autogen>
     </item>
   </item>
