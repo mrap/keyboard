@@ -19,7 +19,7 @@
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Tidal</name>
-    <url type="file">/Applications/Tidal.app</url>
+    <url type="file">{{ ENV_HOME }}/Applications/Tidal.app</url>
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Trello</name>
