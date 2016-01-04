@@ -34,8 +34,8 @@
     <url type="file">{{ ENV_HOME }}/Applications/Slack.app</url>
   </vkopenurldef>
   <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_APP_Mailbox</name>
-    <url type="file">{{ ENV_HOME }}/Applications/Mailbox (Beta).app</url>
+    <name>KeyCode::VK_OPEN_URL_APP_Mail</name>
+    <url type="file">/Applications/Mail.app</url>
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Wunderlist</name>
@@ -244,12 +244,12 @@
     </item>
 
     <item>
-      <name>Hyper+E to open Mailbox</name>
+      <name>Hyper+E to open Mail</name>
       <identifier>com.jasonrudolph.hyper_e</identifier>
       <autogen>
         __KeyToKey__
         KeyCode::K, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-        KeyCode::VK_OPEN_URL_APP_Mailbox,
+        KeyCode::VK_OPEN_URL_APP_Mail,
       </autogen>
     </item>
 
