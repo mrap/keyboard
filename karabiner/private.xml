@@ -38,6 +38,10 @@
     <url type="file">/Applications/Airmail 2.app</url>
   </vkopenurldef>
   <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_VitaminR</name>
+    <url type="file">{{ ENV_HOME }}/Applications/Vitamin-R 2.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Wunderlist</name>
     <url type="file">/Applications/Wunderlist.app</url>
   </vkopenurldef>
@@ -254,6 +258,16 @@
         __KeyToKey__
         KeyCode::K, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
         KeyCode::VK_OPEN_URL_APP_Mail,
+      </autogen>
+    </item>
+
+    <item>
+      <name>Hyper+R to open Vitamin-R</name>
+      <identifier>com.jasonrudolph.hyper_r</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::S, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_VitaminR,
       </autogen>
     </item>
 
