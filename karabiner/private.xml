@@ -39,7 +39,7 @@
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_VitaminR</name>
-    <url type="file">{{ ENV_HOME }}/Applications/Vitamin-R 2.app</url>
+    <url type="file">/Applications/Vitamin-R 2.app</url>
   </vkopenurldef>
   <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Wunderlist</name>
