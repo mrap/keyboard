@@ -2,6 +2,10 @@
 <root>
   <!-- Application URLs -->
   <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_APP_Android_Studio</name>
+    <url type="file">{{ ENV_HOME }}/Applications/Android Studio.app</url>
+  </vkopenurldef>
+  <vkopenurldef>
     <name>KeyCode::VK_OPEN_URL_APP_Chrome</name>
     <url type="file">{{ ENV_HOME }}/Applications/Google Chrome.app</url>
   </vkopenurldef>
@@ -158,6 +162,16 @@
         __KeyToKey__
         KeyCode::OPTION_R, ModifierFlag::OPTION_R | ModifierFlag::NONE,
         KeyCode::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L
+      </autogen>
+    </item>
+
+    <item>
+      <name>Hyper+A to open Android Studio</name>
+      <identifier>com.jasonrudolph.hyper_a</identifier>
+      <autogen>
+        __KeyToKey__
+        KeyCode::A, ModifierFlag::COMMAND_L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+        KeyCode::VK_OPEN_URL_APP_Android_Studio,
       </autogen>
     </item>
 
