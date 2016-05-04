@@ -852,5 +852,39 @@
     </item>
   </item>
 
+  <item>
+    <name>Hold z or / for Ctrl</name>
+    <appendix>Inspired by the ergodox-ez default layout.</appendix>
+
+    <identifier>com.mrap.hold_z_or_forwardslash_for_ctrl</identifier>
+
+    <autogen>
+      --KeyOverlaidModifier--
+      KeyCode::Z,
+      KeyCode::CONTROL_L,
+      KeyCode::Z,
+    </autogen>
+
+    <autogen>
+      --KeyOverlaidModifier--
+      KeyCode::SLASH,
+      KeyCode::CONTROL_L,
+      KeyCode::SLASH,
+    </autogen>
+  </item>
+
+  <item>
+    <name>Hold quote for Cmd</name>
+    <appendix>Inspired by the ergodox-ez default layout.</appendix>
+
+    <identifier>com.mrap.hold_quote_for_cmd</identifier>
+
+    <autogen>
+      --KeyOverlaidModifier--
+      KeyCode::QUOTE,
+      KeyCode::COMMAND_L,
+      KeyCode::QUOTE,
+    </autogen>
+  </item>
 </root>
 
